@@ -1,9 +1,9 @@
 # adc_scripts
 ## missing.pl
-Identify ssl files missing from the /nsconfig/ssl folder.
+> Identify ssl files missing from the /nsconfig/ssl folder.
 
 ## Invallid.pl
-Identify ssl files using invalid characters.(like spaces and asterisks)
+> Identify ssl files using invalid characters.(like spaces and asterisks)
 
 
 ## archive_old.pl
