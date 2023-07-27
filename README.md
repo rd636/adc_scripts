@@ -7,11 +7,14 @@
 ## archive_old.pl
 > Archive ssl files not in use.
 
-##ADM SSL Dashboard
+## ADM SSL Dashboard
 > Removing unused and expired certKeys
 
-##chk_dsk_space.sh
+## chk_dsk_space.sh
 > Check for sufficient space in /var.  
 
 ## dsk_clean.sh
 > Free disk space in /var.
+
+## local_script.json
+ADM config job for uploading and executing a script
