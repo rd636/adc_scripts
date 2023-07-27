@@ -1,0 +1,74 @@
+{
+    "trace_info": "",
+    "is_visible": "true",
+    "tenant_id": "bbd224c6-eeb4-4176-8013-ff40d32fe3dc",
+    "description": "local_script",
+    "commands": [
+        {
+            "trace_info": "",
+            "rollback_command": "",
+            "parent_id": "25990110-90b0-43ad-9c6f-2bfdb02782e1",
+            "nitro_payload": "",
+            "nitro_resource": "",
+            "index": "1",
+            "id": "8e573ef7-b77b-4dbe-9160-16812b665220",
+            "nitro_method": "",
+            "parent_name": "configuration_template",
+            "command": "put $program$ /var/tmp/$program$",
+            "timeout": "300",
+            "protocol": "SCP"
+        },
+        {
+            "trace_info": "",
+            "rollback_command": "",
+            "parent_id": "25990110-90b0-43ad-9c6f-2bfdb02782e1",
+            "nitro_payload": "",
+            "nitro_resource": "",
+            "index": "2",
+            "id": "c18f5d1e-f248-453c-a693-f698e41ea929",
+            "nitro_method": "",
+            "parent_name": "configuration_template",
+            "command": "shell \"chmod +x /var/tmp/$program$\"",
+            "timeout": "300",
+            "protocol": "SSH"
+        },
+        {
+            "trace_info": "",
+            "rollback_command": "",
+            "parent_id": "25990110-90b0-43ad-9c6f-2bfdb02782e1",
+            "nitro_payload": "",
+            "nitro_resource": "",
+            "index": "3",
+            "id": "0f675094-d266-4668-ac5d-dca93dd36033",
+            "nitro_method": "",
+            "parent_name": "configuration_template",
+            "command": "shell \"/var/tmp/$program$\"",
+            "timeout": "300",
+            "protocol": "SSH"
+        }
+    ],
+    "name": "local_script",
+    "device_family": "ns",
+    "category": "",
+    "id": "25990110-90b0-43ad-9c6f-2bfdb02782e1",
+    "variables": [
+        {
+            "trace_info": "",
+            "id": "0f51a99c-5341-43a8-9140-d6a944da6961",
+            "values_enum_db": "",
+            "valuex": "",
+            "required": "true",
+            "description": "",
+            "values_enum": [],
+            "display_name": "certs.pl",
+            "parent_name": "configuration_template",
+            "parent_id": "25990110-90b0-43ad-9c6f-2bfdb02782e1",
+            "name": "program",
+            "default_value": "",
+            "type": "file_chooser"
+        }
+    ],
+    "parent_name": "",
+    "parent_id": "",
+    "is_inbuilt": "false"
+}
