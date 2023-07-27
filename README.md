@@ -1,7 +1,7 @@
 ## missing.pl
 > Identify ssl files missing from the /nsconfig/ssl folder.
 
-## Invallid.pl
+## Invalid.pl
 > Identify ssl files using invalid characters like spaces and asterisks.
 
 ## archive_old.pl
