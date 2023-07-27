@@ -1,18 +1,19 @@
 # adc_scripts
+## missing.pl
 Identify ssl files missing from the /nsconfig/ssl folder.
-missing.pl
 
+## Invallid.pl
 Identify ssl files using invalid characters.(like spaces and asterisks)
-Invallid.pl
 
+
+## archive_old.pl
 Archive ssl files not in use.
-archive_old.pl
 
+##ADM SSL Dashboard
 Removing unused and expired certKeys
-ADM SSL Dashboard
 
+##chk_dsk_space.sh
 Check for sufficient space in /var.  
-chk_dsk_space.sh
 
+## dsk_clean.sh
 Free disk space in /var.
-dsk_clean.sh
