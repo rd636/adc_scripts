@@ -10,7 +10,7 @@
 #
 #    This code is provided to you as is with no representations, 
 #    warranties or conditions of any kind. You may use, modify and 
-#    distribute it at your own risk. CSG disclaims all warranties 
+#    distribute it at your own risk. Author disclaims all warranties 
 #    whatsoever, express, implied, written, oral or statutory, including 
 #    without limitation warranties of merchantability, fitness for a 
 #    particular purpose, title and noninfringement.
