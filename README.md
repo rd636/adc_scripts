@@ -5,4 +5,4 @@
 ## missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl
 
 ## local_script.json - ADM config job for uploading and executing a script
-![local_script.json](https://raw.githubusercontent.com/rd636/adc_scripts/image.gif)
+![local_script.json](https://raw.githubusercontent.com/rd636/adc_scripts/master/image.gif)
