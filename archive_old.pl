@@ -10,7 +10,7 @@
 #
 #    This code is provided to you as is with no representations, 
 #    warranties or conditions of any kind. You may use, modify and 
-#    distribute it at your own risk. Author disclaims all warranties 
+#    distribute it at your own risk. CSG disclaims all warranties 
 #    whatsoever, express, implied, written, oral or statutory, including 
 #    without limitation warranties of merchantability, fitness for a 
 #    particular purpose, title and noninfringement.
@@ -20,6 +20,9 @@ use strict;
 use warnings;
 use File::Copy;
 use Archive::Tar;
+
+# 0 = Archive without deleteing; 1 = Delete after archiving
+my $delete = 0;
 
 # Extract filenames from config
 my @file_names = get_file_names_from_conf('/nsconfig/ns.conf');
@@ -52,7 +55,7 @@ my $archive = Archive::Tar->new();
 
 # Move files to the archive
 foreach my $file (@unused_files) {
-    archive_file($file);
+    archive_file($file, $delete);
 }
 
 # Save the archive
@@ -63,14 +66,16 @@ exit(0);
 ### Subroutines ###
 
 sub archive_file {  # Move files not in @file_array to the archive
-    my ($file) = @_;
+    my ($file, $delete) = @_;
     $file = $source_folder.'/'.$file;
     if (-e $file) {
         $archive->add_files($file) or die "Failed to add $file to the archive: $!";
         print "Added $file to the archive.\n";
         # Remove the original file
-        unlink $file or warn "Failed to remove $file: $!";
-        print "Removed $file.\n";
+        if ($delete) {
+            unlink $file or warn "Failed to remove $file: $!";
+            print "Removed $file.\n";
+        }
     } else {
         warn "$file does not exist. Skipping...\n";
     }
@@ -90,6 +95,7 @@ sub get_file_names_from_conf {
             print "$line";
         } elsif ($line =~ / -cert (?|"([^"]*)"|(\S+))($|\s)/g) {
             push @file_names, $1;
+            print "$line";
         }       
     }
     close($fh);
@@ -108,5 +114,3 @@ sub get_ssl_folder_files {
     closedir($dh);
     return @file_names;
 }
-
-
