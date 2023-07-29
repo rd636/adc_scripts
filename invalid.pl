@@ -19,7 +19,7 @@ use warnings;
 # Extract certKey filenames from config
 my @file_names = get_file_names_from_file('/nsconfig/ns.conf');
 
-# Examine each filename with a binary result
+# Compare the SSL folder to the certKey list with a binary result
 exit(check_files(@file_names));
 
 sub get_file_names_from_file {
@@ -44,24 +44,18 @@ sub check_files {
     my (@file_array) = @_;
     my @invalid;
     foreach my $file (@file_array) {
-        if (contains_invalid_characters($file)) {
+        if ($file =~ /[^A-Za-z0-9._-]/) {
             # print "Invalid characters found in \$file.\n";
             push @invalid, $file;
         } 
     }
     # Return final results
     if (@invalid) {
-        print "\nFiles found with invalid characters:\n";
+        print "\n", scalar @invalid, " Files found with invalid characters:\n";
         print join("\n", @invalid), "\n";
         return(1);
     } else {
-        print "\nAll certKey files are using valid characters.\n";
+        print "\nAll ", scalar @file_array, " certKey files are using valid characters.\n";
         return(0);
     }
-}
-
-# Test for invalid characters
-sub contains_invalid_characters {
-    my ($input) = @_;
-    return $input =~ /[^A-Za-z0-9._-]/;
 }
