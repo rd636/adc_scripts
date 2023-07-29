@@ -1,7 +1,7 @@
 ## Read-only type scripts:
 - invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, etc.
 - missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl.
-  - Using invalid characters messes with replication and impacts HA. Detect if you're about to have a bad day.
+  - Using invalid characters messes with replication which impacts HA. Detect if you're about to have a bad day.
 - chk_dsk_space.sh - Check for sufficient free space in /var and /flash.
   - ADM Upgrade prerequisite checking does this but now you can check fleet-wide before creating the upgrade job. 
 
