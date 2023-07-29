@@ -1,3 +1,5 @@
+These scripts support the care and feeding of SSL certificates and keys.  Focused on identifying systems in fragile conditions and facilitating cleanup.  Combine with ADM SSL Certificate Management and configuration jobs for robust remediation.  
+
 ## Read-only type scripts:
 - invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, etc.
 - missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl.
