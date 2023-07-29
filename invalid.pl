@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 
-#   This program warns when cert and key names using invalid characters. 
+#   This program warns when cert or key names are using invalid characters. 
 #   The only valid characters are A-Za-z0-9._-
 #
 #   Success = exit 0 - No invalid characters found.
