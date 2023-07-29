@@ -1,5 +1,5 @@
 ## Read-only type scripts:
-- invalid.pl - Confirm certKey files are not using invalid characters like spaces and asterisks.
+- invalid.pl - Confirm certKey files are not using invalid characters like spaces, asterisks, slashes, etc.
 - missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl
 - chk_dsk_space.sh - Check for sufficient free space in /var and /flash 
 
