@@ -14,6 +14,8 @@
   
 ## Run them as a Configuration Job
 - local_script.json - ADM config job for uploading and executing a script
-  
+  - These scripts are meant to be run as ADM Config Jobs using the local_script.json configuration template.   The Read-only type return a "completed" execution status if the system complies, otherwise an "error" is returned.  Additional details can be seen if you run it from ssh.
+
+    
 
 ![local_script.json](https://raw.githubusercontent.com/rd636/adc_scripts/master/image.gif)
