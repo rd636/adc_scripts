@@ -1,4 +1,4 @@
-These scripts support the care and feeding of SSL certificates and keys by identifying systems in a fragile state and facilitating cleanup.  Combine with ADM SSL Certificate Management and configuration jobs for robust remediation.  
+These scripts support the care and feeding of SSL certificates and keys by identifying systems in a fragile state and facilitating cleanup.  Combine with ADM SSL Certificate Management and configuration jobs for robust remediation.  Run these on both the primary and secondary devices.
 
 ## Read-only type scripts:
 - invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, etc.
