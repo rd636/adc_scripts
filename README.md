@@ -11,4 +11,6 @@
   
 ## Run them as a Configuration Job
 - local_script.json - ADM config job for uploading and executing a script
+
+
 ![local_script.json](https://raw.githubusercontent.com/rd636/adc_scripts/master/image.gif)
