@@ -22,6 +22,7 @@ rm -rf "/var/ns_system_backup"/*
 
 ###
 ### Free Space in /flash IAW CTX133587
+### Remove all /flash/*.gz files not listed as the kernel file in /flash/boot/loader.conf
 ###
 
 # Define the current kernel in use
