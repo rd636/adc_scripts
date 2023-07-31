@@ -21,7 +21,7 @@ rm -rf "/var/mastools/logs"/*
 rm -rf "/var/ns_system_backup"/*
 
 ###
-### Free Space in the /flash IAW CTX133587
+### Free Space in /flash IAW CTX133587
 ###
 
 # Define the current kernel in use
