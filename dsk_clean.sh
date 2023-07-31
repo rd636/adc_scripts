@@ -26,7 +26,7 @@ rm -rf "/var/ns_system_backup"/*
 ###
 
 # Define the current kernel set in /flash/boot/loader.conf
-current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr -E 's/kernel=\"\/(.*)\"/\1/p')
+current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr 's/kernel=\"\/(.*)\"/\1/p')
 current_kernel="/flash/"$current_kernel".gz"
 
 # Get the list of *.gz in /flash, which should only be boot loaders.
