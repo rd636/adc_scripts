@@ -88,6 +88,7 @@ sub compare_files_in_folder {
     my @found;
     my @invalid;
     foreach my $file (@file_array) {
+        $file =~ s/\/nsconfig\/ssl\///;     # remove hard references to the ssl folder
         if (exists $folder_files{$file}) {
             # print "$file: Found\n";
             push @found, $file;
