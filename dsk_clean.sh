@@ -31,14 +31,15 @@ current_kernel="/flash/"$current_kernel".gz"
 # Get list of kernels in /flash
 files="ls /flash/*.gz"
 
-# Remove all /flash/*.gz except the current kernel file
-for file in $files; do
+# Remove all /flash/*.gz files except the current kernel file
+for file in $files; do # loop through all the /flash/*.gz files
     # Check if the file is not the current_kernel
     if ! [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
-        if ! [[ " ${file} " =~ "ls" ]]; then
-        # Delete the file
-        rm -f "$file"
-        echo "Deleted: $file"
+        # Delete the file since it is not the kernel file    
+        # files will contain "ls" as a filename, so don't try to delete it
+        if ! [[ " ${file} " =~ "ls" ]]; then 
+            rm -f "$file"
+            echo "Deleted: $file"
         fi
     fi
 done
