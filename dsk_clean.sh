@@ -9,6 +9,7 @@
 ### Free space in /var
 ### IAW https://docs.netscaler.com/en-us/citrix-adc/current-release/system/troubleshooting-citrix-adc/how-to-free-space-on-var-directory.html
 ###
+
 rm -rf "/var/nstrace"/*
 rm -rf "/var/log"/*
 rm -rf "/var/nslog"/*
