@@ -77,7 +77,8 @@ sub compare_files_in_folder {
     # Populate the hash with filenames in the folder
     opendir(my $dh, $folder) or die "Cannot open directory '$folder': $!";
     while (my $file = readdir($dh)) {
-        next if ($file =~ /^\./); # Skip entries starting with '.'
+        next if ($file =~ /^\.$/); # Skip '.' entries 
+        next if ($file =~ /^\.\.$/); # Skip '..' entries
         $folder_files{$file} = 1;
     }
     closedir($dh);
