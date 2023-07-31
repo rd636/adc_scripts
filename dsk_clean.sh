@@ -31,7 +31,7 @@ current_kernel="/flash/"$current_kernel".gz"
 # Get list of kernels in /flash
 files="ls /flash/*.gz"
 
-# Loop through the files in the directory
+# Remove all /flash/*.gz except the current kernel file
 for file in $files; do
     # Check if the file is not the current_kernel
     if ! [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
