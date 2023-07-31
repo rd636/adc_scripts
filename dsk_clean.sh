@@ -25,11 +25,11 @@ rm -rf "/var/ns_system_backup"/*
 ### Remove all /flash/*.gz files not listed as the kernel file in /flash/boot/loader.conf
 ###
 
-# Define the current kernel in use
+# Define the current kernel set in /flash/boot/loader.conf
 current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr -E 's/kernel=\"\/(.*)\"/\1/p')
 current_kernel="/flash/"$current_kernel".gz"
 
-# Get list of kernels in /flash
+# Get the list of *.gz in /flash, which should only be boot loaders.
 files="ls /flash/*.gz"
 
 # Remove all /flash/*.gz files except the current kernel file
