@@ -24,11 +24,8 @@ rm -rf "/var/ns_system_backup"/*
 current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr -E 's/kernel=\"\/(.*)\"/\1/p')
 current_kernel="/flash/"$current_kernel".gz"
 
-# Get list of alternate kernels
+# Get list of kernels in /flash
 files="ls /flash/*.gz"
-
-# Change to the directory
-cd "$dir_path" || exit
 
 # Loop through the files in the directory
 for file in $files; do
