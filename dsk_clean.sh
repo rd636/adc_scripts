@@ -31,16 +31,23 @@ current_kernel="/flash/"$current_kernel".gz"
 
 # Get the list of *.gz in /flash, which should only be boot loaders.
 files="ls /flash/*.gz"
+files="${files:3}"  # remove "ls " at the begining of the return string
+echo $files
+
+# Abort if there is only one *.gz file and therefore nothing to delete
+words=( $files )    # convert string to array
+if [[ ${#words[@]} -eq 1 ]]; then
+  # Exit the script
+  echo "no alternate kernel files found to delete." $files
+  exit 0
+fi
 
 # Remove all /flash/*.gz files except the current kernel file
 for file in $files; do # loop through all the /flash/*.gz files
     # Check if the file is not the current_kernel
     if ! [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
-        # Delete the file since it is not the kernel file    
-        # files will contain "ls" as a filename, so don't try to delete it
-        if ! [[ " ${file} " =~ "ls" ]]; then 
+        # Delete the file since it is not the current kernel    
             rm -f "$file"
             echo "Deleted: $file"
-        fi
     fi
 done
