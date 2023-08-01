@@ -1,7 +1,7 @@
 These scripts support the care and feeding of SSL files by identifying systems in an undesirable state and facilitating cleanup.  Combined with ADM SSL Certificate Management and configuration jobs for robust remediation.  Run these on both the primary and secondary devices.
 
 ## Read-only type scripts:
-- invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, etc.
+- invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, stored in a subfolder, etc.
 - missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl.
   - Using invalid characters messes with replication which impacts HA. Detect if you're about to have a bad day.
 - chk_dsk_space.sh - Confirm sufficient free space exists in /var and /flash IAW CTX237973.
