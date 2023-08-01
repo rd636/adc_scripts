@@ -29,7 +29,7 @@ rm -rf "/var/ns_system_backup"/*
 current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr 's/kernel=\"\/(.*)\"/\1/p')
 current_kernel="/flash/"$current_kernel".gz"
 
-# Get the list of *.gz in /flash, which should only be boot loaders.
+# Get the list of *.gz in /flash, which should only be kernels.
 files="ls /flash/*.gz"
 files="${files:3}"  # remove "ls " at the beginning of the return string
 echo $files
