@@ -31,7 +31,7 @@ current_kernel="/flash/"$current_kernel".gz"
 
 # Get the list of *.gz in /flash, which should only be boot loaders.
 files="ls /flash/*.gz"
-files="${files:3}"  # remove "ls " at the begining of the return string
+files="${files:3}"  # remove "ls " at the beginning of the return string
 echo $files
 
 # Abort if there is only one *.gz file and therefore nothing to delete
