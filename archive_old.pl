@@ -2,8 +2,6 @@
 # 
 #   This program archives not-in-use files in the /nsconfig/ssl folder.
 #
-#   Success = exit 0
-#   Failure = exit 1 
 #   Use 'P' to restore the archive from the shell 
 #   # cd /nsconfig/ssl
 #   # tar -xvPf archive.tar 
