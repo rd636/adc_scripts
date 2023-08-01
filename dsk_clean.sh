@@ -29,9 +29,9 @@ rm -rf "/var/ns_system_backup"/*
 current_kernel=$(cat /flash/boot/loader.conf | grep kernel | sed -nr 's/kernel=\"\/(.*)\"/\1/p')
 current_kernel="/flash/"$current_kernel".gz"
 
-# Get the list of *.gz in /flash, which should only be kernels.
+# Get the list of *.gz in /flash, which should only be boot loaders.
 files="ls /flash/*.gz"
-files="${files:3}"  # remove "ls " at the beginning of the return string
+files="${files:3}"  # remove "ls " at the begining of the return string
 echo $files
 
 # Abort if there is only one *.gz file and therefore nothing to delete
@@ -44,10 +44,17 @@ fi
 
 # Remove all /flash/*.gz files except the current kernel file
 for file in $files; do # loop through all the /flash/*.gz files
-    # Check if the file is not the current_kernel
-    if ! [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
-        # Delete the file since it is not the current kernel    
-            rm -f "$file"
-            echo "Deleted: $file"
+    # Proceed only if we have a file matching loader.conf
+    if [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
+        # we have a match with loader.conf, now delete the rest
+        # loop through all the /flash/*.gz files
+        for file in $files; do 
+            # Check if the file is not the current_kernel
+            if ! [[ " ${current_kernel[@]} " =~ " ${file} " ]]; then
+                # Delete the file since it is not the current kernel    
+                rm -f "$file"
+                echo "Deleted: $file"
+            fi
+        done
     fi
 done
