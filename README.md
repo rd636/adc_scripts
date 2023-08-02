@@ -14,7 +14,8 @@ These scripts support the care and feeding of SSL files by identifying systems i
 
 ## Scripts that delete stuff
 - archive_old.pl - Archive ssl files not in use.
-  - all those certKeys you deleted from the configuration may have left the associated files behind in the /nsconfig/ssl folder. This script will move those files into a single gzip file you can delete or archive. 
+  - all those certKeys you deleted from the configuration may have left the associated files behind in the /nsconfig/ssl folder. This script will move those files into a single gzip file you can delete or archive.
+  - Third-party certificate management tools probably left behind old files which this will help remove.
 - dsk_clean.sh - Free disk space in /var and /flash.
 
   
