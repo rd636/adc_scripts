@@ -19,7 +19,7 @@ use strict;
 use warnings;
 
 # Extract certKey filenames from config
-my @file_names = get_file_names_from_file('/nsconfig/dns.conf');
+my @file_names = get_file_names_from_file('/nsconfig/ns.conf');
 
 # Compare the SSL folder to the certKey list with a binary result
 exit(check_files(@file_names));
