@@ -15,6 +15,17 @@
 #    particular purpose, title and noninfringement.
 #
 #
+# Example output:
+#
+# # ca cert: CNA Issuing CA-SHA2.cer
+# shell cd /nsconfig/ssl && cp -n "CNA Issuing CA-SHA2.cer" CNA_Issuing_CA-SHA2.cer
+# update ssl certKey "CNA_Issuing_CA" -cert CNA_Issuing_CA-SHA2.cer
+#
+# 1 Files found with invalid characters:
+# CNA Issuing CA-SHA2.cer
+#
+#
+
 use strict;
 use warnings;
 
