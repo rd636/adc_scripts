@@ -3,7 +3,7 @@ These scripts support the care and feeding of SSL files by identifying systems i
 ## Read-only type scripts:
 - invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, stored in a subfolder, etc.
   - This script will also provide corrective commands.
-  - Use this script before using missing.pl
+  - Use this script before using missing.pl or archive_old.pl.
 - missing.pl - Confirm all in-use ssl files are in /nsconfig/ssl.
   - Using invalid characters messes with replication which impacts HA. Detect if you're about to have a bad day.
   - The output details the filenames it can not locate.
