@@ -90,10 +90,10 @@ sub get_file_names_from_conf {
     while (my $line = <$fh>) {
         if ($line =~ / -cert (?|"([^"]*)"|(\S+)) -key (?|"([^"]*)"|(\S+))($|\s)/g) {
             push @file_names, $1, $2;
-            print "$line";
+            # print "$line";
         } elsif ($line =~ / -cert (?|"([^"]*)"|(\S+))($|\s)/g) {
             push @file_names, $1;
-            print "$line";
+            # print "$line";
         }       
     }
     close($fh);
