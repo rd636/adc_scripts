@@ -1,4 +1,4 @@
-These scripts support the care and feeding of SSL files by identifying systems in an undesirable state and facilitating cleanup.  Combined with ADM SSL Certificate Management and configuration jobs for robust remediation.  Run these on both the primary and secondary devices.   The focus here is to address filesystem cleanup challenges which must stay aligned with what is defined in the configuration. 
+These scripts support the care and feeding of SSL files by identifying systems in an undesirable state and facilitating cleanup.  Combine these with ADM  Certificate Management and configuration jobs for robust remediation.  Run these on both the primary and secondary devices.   The focus here is to address filesystem cleanup challenges which must stay aligned with what is defined in the configuration. 
 
 ## Read-only type scripts:
 - invalid.pl - Confirm ssl files are not using invalid characters like spaces, asterisks, slashes, stored in a subfolder, etc.
